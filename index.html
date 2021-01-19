@@ -1,59 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" media="screen" href="./assets/css/main.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Loopstudios landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-  About
-  Careers
-  Events
-  Products
-  Support
+  <header class='header-bg'>
+    <div id="desktop" class='flex row jc-sb as-c padh-10 desktop-show tablet-hide phonep-hide phonel-hide padv-40'>
+      <div>
+        <img class='logo' src='./assets/images/logo.svg'>
+      </div>
+      <nav>
+        <ul class='flex wor wrap jc-c ac-c desktop-12 desktop-nav pad-3'>
+          <li class='padh-10'><a href="/home">About</a></li>
+          <li class='padh-10'><a href="/about">Careers</a></li>
+          <li class='padh-10'><a href="/cases">Events</a></li>
+          <li class='padh-10'><a href="/blog">Products</a></li>
+          <li class='padh-10'><a href="/contact">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="desktop" class='flex row jc-sb as-c padh-10 desktop-show tablet-hide phonep-hide phonel-hide padv-40'>
+      <div class='desktop-12 tablet-12'>
+        <div class='title-container pad-30 as-c'>
+          <h1 class='hero-title'>Immersive Experiences that Deliver</h1>
+        </div>
+      </div>
+    </div>
 
-  Immersive experiences that deliver
+    <div id="mobile" class='tablet-show phonel-show phonep-show desktop-hide'>
+      <div class='flex row wrap jc-sb as-c padh-20 padv-30'>
+        <div>
+          <img class='logo' src='./assets/images/logo.svg'>
+        </div>
+        <div data-open-dropdown="mobilenav" class="toggle-bar as-fs pad-3">
+          <img src="./assets/images/icon-hamburger.svg">
+        </div>
+        <div class='flex row wrap jc-c ac-c padh-20 pad-resp'>
+          <div class='title-container-mobile tablet-12 phonep-12 phonel-12'>
+            <h1 class='hero-title-mobile padv-20 padh-20'>Immersive Experiences that Deliver</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mobile" class="mobilenav padh-30" data-dropdown="mobilenav">
+      <div class='modal hidden'>
+        <div class='flex row wrap jc-sb padh-30 padv-30 fit-element'>
+          <div class='tablet-6 phonep-6 phonel-6'>
+            <img class='logo' src='./assets/images/logo.svg'>
+          </div>
+          <div data-open-dropdown="mobilenav" class="tablet-6 phonep-6 phonel-6 pad-3 close-modal right">
+            <img src="./assets/images/icon-close.svg">
+          </div>
+          <div class="flex fd-col wrap ai-sb jc-c fit-element">
+            <a class="padbottom-20 tablet-12 phonep-12 phonel-12" title="About Loopstudios" href="/about">About</a>
+            <a class="padv-20 tablet-12 phonep-12 phonel-12" title="Work in Loopstudios" href="/careers">Careers</a>
+            <a class="padv-20 tablet-12 phonep-12 phonel-12" title="Fun events at Loopstudios and more" href="/events">Events</a>
+            <a class="padv-20 tablet-12 phonep-12 phonel-12" title="Packages" href="/packages">Packages</a>
+            <a class="padv-20 tablet-12 phonep-12 phonel-12" title="Loopstudios is here to support any of your enquiries" href="/support">Support</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </header>
+  <main>
+    <div id="desktop" class='flex row padh-10 desktop-show tablet-hide phonep-hide phonel-hide padv-70 pos-rel'>
+      <div class='flex row wrap jc-sb'>
+        <div class='desktop-12 tablet-12'>
+          <img src='./assets/images/desktop/image-interactive.jpg'>
+          <div class='about-container'>
+            <h1 class='h1-title'>The leader in interactive VR</h1>
+            <p> Founded in 2011, Loopstudios has been producing world-class virtual reality
+              projects for some of the best companies around the globe. Our award-winning
+              creations have transformed businesses through digital experiences that bind
+              to their brand.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="mobile" class='tablet-show phonel-show phonep-show desktop-hide'>
+      <div class='flex row wrap padh-20 padv-50'>
+        <div class='tablet-12 phonep-12 phonel-12'>
+          <img src='./assets/images/mobile/image-interactive.jpg'>
+        </div>
+        <div class='tablet-12 phonep-12 phonel-12'>
+          <div class='mobile-about-container center'>
+            <h1>The leader in interactive VR</h1>
+            <p class='center'> Founded in 2011, Loopstudios has been producing world-class virtual reality
+              projects for some of the best companies around the globe. Our award-winning
+              creations have transformed businesses through digital experiences that bind
+              to their brand.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  The leader in interactive VR
+    <div id="desktop">
+      <div class='flex row wrap jc-sb padh-10 desktop-show tablet-hide phonep-hide phonel-hide padv-40'>
+        <h1 class='h1-title'>Our Creations</h1>
+        <a class='btn as-fs jc-fe'>See All</a>
+      </div>
+      <div class='flex row wrap jc-sb desktop-show padh-10 padbottom-150 padtop-30 tablet-hide phonep-hide phonel-hide'>
+        <div class="project-detail-content desktop-3">
+          <a href="/creations/deep-earth">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/desktop/image-deep-earth.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title'>Deep Earth</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="project-detail-content desktop-3">
+          <a href="/creations/night-arcade">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/desktop/image-night-arcade.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title'>Night arcade</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="project-detail-content desktop-3">
+          <a href="/creations/soccer-team-vr">
+            <div class="project-detail-image-wrapper fit-element">
+              <img class='test' src="./assets/images/desktop/image-soccer-team.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <div class='card-title fit-card'>
+                      <h1>Soccer team VR</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="project-detail-content desktop-3">
+          <a href="/creations/the-grid">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/desktop/image-grid.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title'>The grid</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class='padv-30 project-detail-content desktop-3'>
+          <a href="/creations/from-up-above-vr">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/desktop/image-from-above.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title fit-card'>From up above VR</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class='padv-30 project-detail-content desktop-3'>
+          <a href="/creations/pocket-borealis">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/desktop/image-pocket-borealis.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title'>Pocket borealis</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class='padv-30 project-detail-content desktop-3'>
+          <a href="/creations/the-curiosity">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/desktop/image-curiosity.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title'>The curiosity</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class='padv-30 project-detail-content desktop-3'>
+          <a href="/creations/make-it-fisheye">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/desktop/image-fisheye.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title'>Make it fisheye</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
 
-  Founded in 2011, Loopstudios has been producing world-class virtual reality 
-  projects for some of the best companies around the globe. Our award-winning 
-  creations have transformed businesses through digital experiences that bind 
-  to their brand.
+    <div id="mobile" class='tablet-show phonel-show phonep-show desktop-hide'>
+      <div class='flex row wrap jc-c padh-10'>
+        <h1 class='h1-title'>Our Creations</h1>
+      </div>
+      <div class='flex row wrap jc-c padh-20 padbottom-50'>
+        <div class="padv-10 project-detail-content">
+          <a href="/creations/deep-earth">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/mobile/image-deep-earth.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title-mobile fit-resp'>Deep Earth</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="padv-10 project-detail-content">
+          <a href="/creations/night-arcade">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/mobile/image-night-arcade.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title-mobile'>Night arcade</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="padv-10 project-detail-content">
+          <a href="/creations/soccer-team-vr">
+            <div class="project-detail-image-wrapper fit-element">
+              <img class='test' src="./assets/images/mobile/image-soccer-team.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <div class='card-title-mobile fit-card'>
+                      <h1>Soccer team VR</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="padv-10 project-detail-content">
+          <a href="/creations/soccer-team-vr">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/mobile/image-grid.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title-mobile fit-small-card'>The grid</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class='padv-10 project-detail-content'>
+          <a href="/creations/soccer-team-vr">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/mobile/image-from-above.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title-mobile fit-card'>From up above VR</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class='padv-10 project-detail-content'>
+          <a href="/creations/soccer-team-vr">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/mobile/image-pocket-borealis.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title-mobile'>Pocket borealis</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class='padv-10 project-detail-content'>
+          <a href="/creations/soccer-team-vr">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/mobile/image-curiosity.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title-mobile'>The curiosity</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class='padv-10 project-detail-content'>
+          <a href="/creations/soccer-team-vr">
+            <div class="project-detail-image-wrapper fit-element">
+              <img src="./assets/images/mobile/image-fisheye.jpg">
+              <div class="project-title project-service">
+                <div class="card-container">
+                  <h1 class='card-title-mobile'>Make it fisheye</h1>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class='padv-30'>
+          <a class='btn as-fs jc-fe'>See All</a>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  Our creations
+  <footer class='black-bg'>
+    <div class='padv-30'>
+      <div id="desktop" class='flex row jc-sb as-c padh-10 padv-10 desktop-show tablet-hide phonep-hide phonel-hide'>
+        <div class="as-c">
+          <img class='logo' src='./assets/images/logo.svg'>
+        </div>
+        <div class='as-c'>
+          <ul class='flex'>
+            <li class="pad-10"><img src="./assets/images/icon-facebook.svg"></li>
+            <li class="pad-10"><img src="./assets/images/icon-twitter.svg"></li>
+            <li class="pad-10"><img src="./assets/images/icon-pinterest.svg"></li>
+            <li class="pad-10"><img src="./assets/images/icon-instagram.svg"></li>
+          </ul>
+        </div>
+      </div>
 
-  See all
+      <div class='flex row jc-sb as-c desktop-show tablet-hide phonep-hide phonel-hide'>
+        <nav class='padv-10 as-c'>
+          <ul class='no-pad flex'>
+            <li><a class='pad-10' href="/home">About</a></li>
+            <li><a class='pad-10' href="/about">Careers</a></li>
+            <li><a class='pad-10' href="/cases">Events</a></li>
+            <li><a class='pad-10' href="/blog">Products</a></li>
+            <li><a class='pad-10' href="/contact">Support</a></li>
+          </ul>
+        </nav>
+        <div class='padv-10'>
+          <span class='copyright-text'> © 2021 Loopstudios. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
 
-  Deep earth
-  Night arcade
-  Soccer team VR
-  The grid
-  From up above VR
-  Pocket borealis
-  The curiosity
-  Make it fisheye
+    <div>
 
-  About
-  Careers
-  Events
-  Products
-  Support
-
-  © 2021 Loopstudios. All rights reserved.
-
+    </div>
+    <div id="mobile" class='tablet-show phonel-show phonep-show desktop-hide'>
+      <div class='flex wrap jc-c'>
+        <div>
+          <img class='logo' src='./assets/images/logo.svg'>
+        </div>
+      </div>
+      <div div class='flex fd-col ai-c padv-20'>
+        <a class="padv-10" title="About Loopstudios" href="/about">About</a>
+        <a class="padv-10" title="Work in Loopstudios" href="/careers">Careers</a>
+        <a class="padv-10" title="Fun events at Loopstudios and more" href="/events">Events</a>
+        <a class="padv-10" title="Packages" href="/packages">Packages</a>
+        <a class="padv-10" title="Loopstudios is here to support any of your enquiries" href="/support">Support</a>
+        <div id="desktop" class='flex row wrap jc-c as-c padtop-40'>
+          <div class='as-c'>
+            <ul class='no-pad flex'>
+              <li class="pad-10"><img src="./assets/images/icon-facebook.svg"></li>
+              <li class="pad-10"><img src="./assets/images/icon-twitter.svg"></li>
+              <li class="pad-10"><img src="./assets/images/icon-pinterest.svg"></li>
+              <li class="pad-10"><img src="./assets/images/icon-instagram.svg"></li>
+            </ul>
+          </div>
+        </div>
+        <div class='padbottom-30'>
+          <span class='copyright-text'> © 2021 Loopstudios. All rights reserved.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Carlos Arturo Agelvis</a>.
   </div>
+
+  <script async src="./assets/js/mobileDropDownMenu.js"></script>
 </body>
+
 </html>
